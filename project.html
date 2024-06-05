@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Proyek - Nama Proyek</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            color: #333;
+            scroll-behavior: smooth;
+        }
+
+        header {
+            background-color: #cc0000;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            animation: fadeIn 2s;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #b30000;
+            animation: slideDown 1s;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-transform: uppercase;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #ff6666;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        .project-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .project-header h1 {
+            font-size: 2.5em;
+            color: #cc0000;
+        }
+
+        .parallax {
+            background-image: url('parallax.jpeg');
+            min-height: 400px;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+        }
+
+        .parallax h2 {
+            color: white;
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 3em;
+            animation: fadeIn 2s;
+        }
+
+        .project-details {
+            margin: 20px 0;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            animation: fadeInUp 1s;
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #cc0000;
+            color: white;
+            padding: 10px;
+            border-radius: 50%;
+            display: none;
+            text-align: center;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.3s;
+        }
+
+        .back-to-top:hover {
+            background-color: #ff6666;
+        }
+
+        footer {
+            background-color: #b30000;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideDown {
+            from {
+                transform: translateY(-100%);
+            }
+
+            to {
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Nama Proyek</h1>
+        <p>Deskripsi singkat proyek</p>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="portfolio.html">Portofolio</a>
+    </nav>
+    <div class="parallax">
+        <h2>Nama Proyek</h2>
+    </div>
+    <div class="container">
+        <div class="project-details">
+            <h2>Detail Proyek</h2>
+            <p>Paragraf 1: Jelaskan tujuan dan lingkup proyek Anda.</p>
+            <p>Paragraf 2: Jelaskan proses dan teknologi yang digunakan dalam proyek.</p>
+            <p>Paragraf 3: Hasil dan dampak dari proyek tersebut.</p>
+            <!-- Tambahkan paragraf lainnya sesuai kebutuhan -->
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Nama Anda. Semua Hak Dilindungi.</p>
+    </footer>
+    <div class="back-to-top" onclick="scrollToTop()">↑</div>
+    <script>
+        // Scroll to top button
+        window.onscroll = function () {
+            var backToTop = document.querySelector('.back-to-top');
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                backToTop.style.display = "block";
+            } else {
+                backToTop.style.display = "none";
+            }
+        };
+
+        function scrollToTop() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+</body>
+
+</html>
